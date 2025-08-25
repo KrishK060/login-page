@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Variations</title>
+    <style>
+        .nav-container{
+            margin: 0;
+            padding:0;
+        }
+        .nav1{
+            padding:10px;
+            border: 2px solid red;
+            border-radius: 10px; 
+            position: relative;
+        }
+        .nav1 ul{
+            list-style-type: none;
+            display: flex;
+            justify-content:space-around;
+        }
+       
+        .nav1::after{
+            content: "";
+            position: absolute;
+            left: 12px;
+            right: 12px;
+            bottom: -6px;
+            height: 4px;
+            background: linear-gradient(90deg, red, blue);
+            border-radius: 4px;
+        }
+        .nav1 .login-button{
+            background-color: blue;
+            color: white;
+            border: 2px solid red;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+
+        .nav2{
+            background-color: green;
+            width:300px;
+            padding: 20px;
+        }
+        .nav2 ul{
+            list-style-type: none;
+            margin: 0%;
+            padding: 0%;
+        }
+        .nav2 li{
+            margin-bottom: 10px;
+        }
+        .nav2 a{
+            color: aliceblue;
+        }
+        .nav2 a:hover{
+            background-color: rgb(122, 136, 101);
+        }
+        .nav2 .login-button{
+            background-color: rgb(10, 158, 101);
+            color: white;
+            width:50%;
+            padding: 10px;
+        }
+        .nav3{
+            background-color: aqua;
+            padding: 10px;
+        }
+        .nav3 ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content:space-around;
+        }
+        .nav3 a{
+            text-decoration: none;
+            display: block;
+        }
+        .nav3 .dropdown-content{
+            display: none;
+        }
+        .nav3 .dropdown:hover .dropdown-content{
+            display: block;
+            position: absolute;
+            background-color: rgb(23, 167, 167);
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .nav3 .dropdown-content a {
+            color: white !important;
+        }
+        .nav3 .dropdown-content a:hover{
+            background-color: aquamarine;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <h2>variation 1: horizonatal with underline effect</h2>
+        <nav class="nav1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button class="login-button">Login</button></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="nav-container">
+        <h2>variation 2: vertical with hover effect</h2>
+        <nav class="nav2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button class="login-button">Login</button></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="nav-container">
+        <h2>variation 3: horizontal with dropdown </h2>
+        <nav class="nav3">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class = "dropdown"><a href="#">About</a>
+                <div class="dropdown-content">
+                    <a href="#">our story</a>
+                    <a href="#">Team</a>
+                    <a href="#">contact us</a>
+                </div>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li><button>Login</button></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
